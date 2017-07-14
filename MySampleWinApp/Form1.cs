@@ -33,7 +33,7 @@ namespace MySampleWinApp
         {
             var resp = CalulateLogicTC2(2, 5);
 
-            label1.Text = "Done - " + resp;
+            label1.Text = "OK Done - " + resp;
         }
 
         public int CalulateLogicTC2(int a, int b)
