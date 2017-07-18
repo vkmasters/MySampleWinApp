@@ -38,7 +38,7 @@ namespace MySampleWinApp
 
         public int CalulateLogicTC2(int a, int b)
         {
-            return a + b * a ;
+            return a + b * (a + 2) ;
         }
     }
 }
