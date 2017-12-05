@@ -1,0 +1,23 @@
+pipeline {
+    agent none 
+    stages {
+        stage('QA') {
+            steps {
+                echo 'Hello, Maven'
+                input message: 'Do you want to deploy?', submitter: 'vineet'
+            }
+        }
+        stage('Staging') {
+            steps {
+                echo 'Hello, JDK'
+                input message: 'Do you want to deploy?', submitter: 'vineet'
+            }
+        }
+        stage('Prod') {
+            steps {
+                echo 'Hello, JDK'
+                input message: 'Do you want to deploy?', submitter: 'vineet'
+            }
+        }
+    }
+}
