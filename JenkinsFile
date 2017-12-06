@@ -4,19 +4,22 @@ pipeline {
         stage('QA') {
             steps {
                 echo 'Hello, Maven'
-                input message: 'Do you want to deploy?', submitter: 'vineet'
+                copyArtifacts fingerprintArtifacts: true, projectName: 'proxy-pos-ci', target: 'C:\\Users\\Administrator\\Desktop\\Build\\QA'
+                input message: 'Do you want to deploy?', submitter: 'vedank'
             }
         }
         stage('Staging') {
             steps {
                 echo 'Hello, JDK'
-                input message: 'Do you want to deploy?', submitter: 'vineet'
+                copyArtifacts fingerprintArtifacts: true, projectName: 'proxy-pos-ci', target: 'C:\\Users\\Administrator\\Desktop\\Build\\Stage'
+                input message: 'Do you want to deploy?', submitter: 'vedank'
             }
         }
         stage('Prod') {
             steps {
                 echo 'Hello, JDK'
-                input message: 'Do you want to deploy?', submitter: 'vineet'
+                copyArtifacts fingerprintArtifacts: true, projectName: 'proxy-pos-ci', target: 'C:\\Users\\Administrator\\Desktop\\Build\\Prod'
+                input message: 'Do you want to deploy?', submitter: 'vedank'
             }
         }
     }
